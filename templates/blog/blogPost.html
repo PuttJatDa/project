@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Post
+{% endblock title %}
+{% block blogActive %}active{% endblock blogActive %}
+{% block body %} 
+<div class="container">
+<div class="blog-post">
+            <h2 class="blog-post-title">{{post.title}}</h2>
+            <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
+            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                alt="Thumbnail [200x250]" style="width: 1300px; height: 650px;"
+                src="{{post.img.url}}"
+                data-holder-rendered="true">
+            <p>{{post.content}}</p>
+            <hr>
+</div>
+{% endblock body %}
