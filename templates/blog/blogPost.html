@@ -7,6 +7,12 @@
 <div class="blog-post">
             <h2 class="blog-post-title">{{post.title}}</h2>
             <p class="blog-post-meta">{{post.timeStamp}} by <a href="#">{{post.author}}</a></p>
+            {% if post.public %}
+            <strong class="d-inline-block mb-2 text-primary">Public</strong>
+            {% else %}
+            <strong class="d-inline-block mb-2 text-primary">Private</strong>
+            {% endif %}
+
             <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
                 alt="Thumbnail [200x250]" style="width: 1300px; height: 650px;"
                 src="{{post.img.url}}"
